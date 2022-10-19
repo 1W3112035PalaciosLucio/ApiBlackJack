@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cxkFAdqTUQYy08814pIEcNHfXRY3QOt2Rbg6Qjbty7caQmUzS72Tg3D7aa5nee0KLqU9AHaUqMddGuiQz4lNnA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Iñaki\\Desktop\\BACKEND_BLACKJACK\\BACKEND_BLACKJACK.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Iñaki\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

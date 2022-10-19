@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Escritorio\\Api_BlackJack\\Api_BlackJack\\Api_BlackJack.csproj": {}
+    "C:\\Users\\Iñaki\\Desktop\\ApiBlackJack\\Api_BlackJack\\Api_BlackJack.csproj": {}
   },
   "projects": {
-    "D:\\Escritorio\\Api_BlackJack\\Api_BlackJack\\Api_BlackJack.csproj": {
+    "C:\\Users\\Iñaki\\Desktop\\ApiBlackJack\\Api_BlackJack\\Api_BlackJack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Escritorio\\Api_BlackJack\\Api_BlackJack\\Api_BlackJack.csproj",
+        "projectUniqueName": "C:\\Users\\Iñaki\\Desktop\\ApiBlackJack\\Api_BlackJack\\Api_BlackJack.csproj",
         "projectName": "Api_BlackJack",
-        "projectPath": "D:\\Escritorio\\Api_BlackJack\\Api_BlackJack\\Api_BlackJack.csproj",
-        "packagesPath": "C:\\Users\\lucio\\.nuget\\packages\\",
-        "outputPath": "D:\\Escritorio\\Api_BlackJack\\Api_BlackJack\\obj\\",
+        "projectPath": "C:\\Users\\Iñaki\\Desktop\\ApiBlackJack\\Api_BlackJack\\Api_BlackJack.csproj",
+        "packagesPath": "C:\\Users\\Iñaki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iñaki\\Desktop\\ApiBlackJack\\Api_BlackJack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Iñaki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,14 +39,43 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

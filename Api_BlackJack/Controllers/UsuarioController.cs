@@ -1,6 +1,8 @@
 ﻿using Api_BlackJack.DataContext;
+using Api_BlackJack.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,14 @@ namespace Api_BlackJack.Controllers
         public UsuarioController(BlackJackContext _context)
         {
             this.context = _context;
+        }
+
+        [HttpGet]
+        [Route("usuarios/getUsuarios")]
+        public async Task<ActionResult> getUsuarios()
+        {
+            var lista = await context.Usuarios.ToListAsync();
+            return Ok(lista);
         }
 
     }

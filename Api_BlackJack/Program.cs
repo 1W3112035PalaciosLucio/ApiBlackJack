@@ -14,8 +14,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddEntityFrameworkMySql().AddDbContext<BlackJackContext>(options => options.UseMySQL("Server=localhost; Database=BlackJack; Port=3306;User Id=root; Password=45262;"));
-AppContext.SetSwitch("MySql.EnableLegacyTimestampBehavior", true);
+
+
+
 var app = builder.Build();
+
+AppContext.SetSwitch("MySql.EnableLegacyTimestampBehavior", true);
+
 
 
 // Configure the HTTP request pipeline.
@@ -25,12 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(c =>
-{
-    c.AllowAnyHeader();
-    c.AllowAnyMethod();
-    c.AllowAnyOrigin();
-});
+
 
 if (!app.Environment.IsDevelopment())
 {
@@ -38,6 +38,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseCors(c =>
+{
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

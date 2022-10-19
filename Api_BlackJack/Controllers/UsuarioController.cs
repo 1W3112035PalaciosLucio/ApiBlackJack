@@ -1,5 +1,7 @@
-﻿using Api_BlackJack.DataContext;
+﻿using Api_BlackJack.Comands;
+using Api_BlackJack.DataContext;
 using Api_BlackJack.Models;
+using Api_BlackJack.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -20,13 +22,30 @@ namespace Api_BlackJack.Controllers
             this.context = _context;
         }
 
+        [HttpPost]
+        [Route("loginUsuario")]
+        public async Task<ActionResult<ResultadoBase>> postLogin([FromBody]ComandoLogin comando)
+        {
+            ResultadoBase resultado = new ResultadoBase();
+            var usuario = await context.Usuarios.Where(c => c.Email.Equals(comando.email) && c.Clave.Equals(comando.clave)).FirstOrDefaultAsync();
+            if(usuario != null)
+            {
+                resultado.setOk();
+                return Ok(resultado);
+            }
+            else
+            {
+                resultado.setError("Usuario no encontrado");
+                return BadRequest(resultado);
+            }
+        }
+
         [HttpGet]
-        [Route("usuarios/getUsuarios")]
+        [Route("getUsuarios")]
         public async Task<ActionResult> getUsuarios()
         {
             var lista = await context.Usuarios.ToListAsync();
             return Ok(lista);
         }
-
     }
 }
